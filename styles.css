@@ -180,22 +180,21 @@ a:hover {
 
 /* - Animation */
 .cursor {
-  background-color: #F1F2ED;
-  color: #F1F2ED;
+  color: #0E073F;
   position: absolute;
   height: 100%;
   top: 0;
-  right: 0;
-  padding-right: 17px;
-  border-left: 2px solid #0E073F;
+  left: 0;
+  padding-right: 0;
+  border-right: 2px solid #0E073F;
 }
 
 @keyframes blinkCursor {
   from {
-    border-left-color: #0E073F;
+    border-right-color: #0E073F;
   }  
   to {
-    border-left-color: transparent;
+    border-right-color: transparent;
   }
 }
 
