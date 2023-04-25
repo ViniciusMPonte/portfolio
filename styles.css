@@ -235,6 +235,12 @@ a:hover {
 .hiddenImgMask {
   background-color: white;
 }
+/* - text */
+#about p {
+
+  text-align: justify;
+
+}
 
 /* - images */
 .perfilImg {
@@ -327,6 +333,17 @@ a:hover {
   transition: transform .2s;
 }
 
+.projPageLink {
+  display: block; 
+  height: 100%;
+}
+
+.projRepoLink {
+  position: relative; 
+  bottom: 33px; 
+  right: 5px;
+}
+
 .projItem:hover {
   transform: scale(1.02);
 }
@@ -369,6 +386,14 @@ a:hover {
   top: 0;
   left: 7%;
 }
+
+/* Skills Section */
+
+.headerSkills span {
+  color: rgb(5,241,199);
+  font-size: 3.5rem;
+}
+
 
 /* Footer Section */
 #footer {
