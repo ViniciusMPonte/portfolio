@@ -4,7 +4,7 @@ var writeTyping;
 var waitTyping;
 var deleteTyping;
 
-setInterval(function() {
+setInterval(function () {
   var bigHeaderText = document.querySelector(".bigHeader.transparent").innerHTML;
   var bigHeaderTyping = document.querySelector(".bigHeader.cursor");
 
@@ -65,9 +65,9 @@ setInterval(function() {
 
 
 function isInViewport(element) {
-  
+
   const rect = document.querySelector(element).getBoundingClientRect();
-  
+
   if ((rect.top > window.innerHeight) || (rect.top < 0 && rect.bottom < 0)) {
     return (false);
   } else {
@@ -78,7 +78,7 @@ function isInViewport(element) {
 
 
 
-document.addEventListener("scroll", function() {
+document.addEventListener("scroll", function () {
 
   if (isInViewport("#home")) {
     document.querySelector(".titleEl").classList.add("upAppear");
@@ -128,4 +128,36 @@ document.addEventListener("scroll", function() {
     document.querySelector(".headerSkills").classList.add("transparent");
   }
 
+});
+
+
+function adjustProjectCardHeight() {
+
+  let projItens = document.querySelectorAll(".projItem")
+  let greaterHeight = 0
+
+  projItens.forEach(projItem => { projItem.style.height = `auto` })
+
+  for (let i = 0; i < projItens.length; i++) {
+
+    if (projItens[i].offsetHeight > greaterHeight) {
+
+      greaterHeight = projItens[i].offsetHeight
+
+    }
+
+    if (projItens.length === i + 1) {
+
+      projItens.forEach(projItem => { projItem.style.height = `${greaterHeight}px` })
+
+    }
+
+  }
+}
+
+adjustProjectCardHeight()
+
+
+window.addEventListener('resize', function () {
+  adjustProjectCardHeight()
 });
